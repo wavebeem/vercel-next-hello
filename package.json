@@ -8,8 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "10.x",
     "react": "17.x",
-    "react-dom": "17.x"
+    "react-dom": "17.x",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
   }
 }
