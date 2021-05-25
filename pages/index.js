@@ -5,9 +5,9 @@ import styles from "./index.module.css";
 
 export default function Home({ allPostData }) {
   return (
-    <div className={styles.container}>
+    <div>
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1>
           <a href="https://nextjs.org">Next.js</a> Blog Example
         </h1>
         <Image
