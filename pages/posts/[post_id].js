@@ -21,7 +21,7 @@ export default function PostId({ post }) {
 
 export async function getStaticPaths() {
   const posts = await getSortedPostsData();
-  const paths = posts.map((post) => ["/posts", post.id].join("/"));
+  const paths = posts.map((post) => `/posts/${post.id}`);
   return { paths, fallback: false };
 }
 
