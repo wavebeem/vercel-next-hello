@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 
 export default function Home({ allPostData }) {
   return (
-    <div>
+    <>
       <main className={styles.main}>
         <h1>
           <a href="https://nextjs.org">Next.js</a> Blog Example
@@ -31,7 +31,7 @@ export default function Home({ allPostData }) {
           })}
         </ul>
       </main>
-    </div>
+    </>
   );
 }
 

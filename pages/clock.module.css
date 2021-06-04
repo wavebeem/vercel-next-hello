@@ -1,0 +1,18 @@
+.main {
+  padding: 2rem;
+  background: white;
+  font-family: sans-serif;
+  font-size: 32px;
+}
+
+.main[data-mode="error"] {
+  color: red;
+}
+
+.main[data-mode="loading"] {
+  color: silver;
+}
+
+.clock {
+  font-variant-numeric: tabular-nums;
+}
