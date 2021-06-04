@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import styles from "./clock.module.css";
 
-async function fetchJson(url) {
+async function fetchJson(url: string): Promise<Record<string, any>> {
   const resp = await fetch(url);
   if (!resp.ok) {
     throw new Error(resp.statusText);

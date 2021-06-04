@@ -1,9 +1,15 @@
+import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 import { getSortedPostsData } from "../lib/posts";
 import styles from "./index.module.css";
 
-export default function Home({ allPostData }) {
+interface IndexProps {
+  allPostData: Record<string, any>[];
+}
+
+const Index: FC<IndexProps> = ({ allPostData }) => {
   return (
     <>
       <main className={styles.main}>
@@ -33,9 +39,11 @@ export default function Home({ allPostData }) {
       </main>
     </>
   );
-}
+};
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostData = await getSortedPostsData();
   return { props: { allPostData } };
-}
+};
+
+export default Index;

@@ -5,7 +5,7 @@ import remark from "remark";
 import remarkHtml from "remark-html";
 import { sortBy } from "./sortBy";
 
-export async function getSortedPostsData() {
+export async function getSortedPostsData(): Promise<Record<string, any>[]> {
   const dir = path.join(process.cwd(), "posts");
   const filenames = fs.readdirSync(dir);
   const postData = await Promise.all(

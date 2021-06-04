@@ -1,4 +1,4 @@
-export function compareBy(a, b, fn) {
+export function compareBy<X, Y>(a: X, b: X, fn: (a: X) => Y): -1 | 0 | 1 {
   const ax = fn(a);
   const bx = fn(b);
   if (ax < bx) return -1;
