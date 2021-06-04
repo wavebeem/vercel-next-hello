@@ -9,7 +9,7 @@ interface PostIdProps {
   post?: Record<string, any>;
 }
 
-export const PostId: FC<PostIdProps> = ({ post }) => {
+const PostId: FC<PostIdProps> = ({ post }) => {
   return (
     <Layout>
       <Head>
@@ -36,3 +36,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = posts.find((p) => p.id === params?.post_id);
   return { props: { post } };
 };
+
+export default PostId;
