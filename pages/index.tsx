@@ -23,6 +23,7 @@ const Index: FC<IndexProps> = ({ allPostData }) => {
           layout="fixed"
           alt=""
         />
+        <a href="/ssr-headers/">SSR Headers Test</a>
         <ul>
           {allPostData.map((post) => {
             return (
